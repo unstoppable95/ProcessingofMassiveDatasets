@@ -55,17 +55,29 @@ def main():
     numberOfPairsPeople=0
     numberOfPairsPeopleDays=0
 
+    uniquePeople=[]
+    dictHist={}
     for x in dictPairCount:
+        if (dictPairCount[x] not in dictHist):
+            dictHist[dictPairCount[x]] = 1
+        else:
+            dictHist[dictPairCount[x]] += 1
         if dictPairCount[x]>1:
+            if (x[0] not in uniquePeople):
+                uniquePeople.append(x[0])
+            if(x[1] not in uniquePeople):
+                uniquePeople.append(x[1])
             numberOfPairsPeople+=1
-            #numberOfPairsPeopleDays+=dictPairCount[x]
             #number of combinations pair's days
             numberOfPairsPeopleDays += (factorial(dictPairCount[x])/(factorial(2)*factorial(dictPairCount[x]-2)))
 
-    print("Liczba podejrzanych par " ,numberOfPairsPeople)
-    print("Liczba podejrzanych par ludzi i dni" , int(numberOfPairsPeopleDays))
-    #TODO
-    #liczba ogolnie podejrzanych osob
+    numberOfPeople=len(uniquePeople)
+    print("Liczba podejrzanych par: " ,numberOfPairsPeople)
+    print("Liczba podejrzanych par ludzi i dni: " , int(numberOfPairsPeopleDays))
+    print("Liczba podejrzanych ludzi: ", numberOfPeople)
+    print("Histogram :")
+    print(dictHist)
     #histogram postaci ilosc spotkan - os x ; liczba par o takiej ilosci - os y
+
 if __name__=="__main__":
     main()
