@@ -8,18 +8,18 @@ bash get_dataset.sh
 ## To build example SQLite Docker image:
 
 ```
-docker build sqlite_example .
+docker build -t lab3 .
 ```
 
 ## To run example container:
 ```
-docker run --name sqlite_example_container sqlite_example
+docker run --name lab3con lab3
 ```
 
 ## To stop and remove example container:
 ```
-docker stop sqlite_example_container
-docker rm sqlite_example_container
+docker stop lab3con
+docker rm lab3con
 ```
 
 ## To run example container in an interactive mode:
