@@ -54,7 +54,7 @@ Coldplay 201081
 5283f472d868bfac68805acb83f35fd7142e3afd
 ```
 ## Schemat bazy danych
-![Schemat bazy danych](Schemat_bazy.jpg)
+![Schemat bazy danych](Schemat_bazy.JPG)
 
 
 
