@@ -99,8 +99,8 @@ def task_4(cur):
         select d.month, count(s.song_id) from dates d join samples s on s.date_id = d.id group by d.month order by d.month;
         """)
 
-    for a in cur.fetchall():
-        print(" ".join(map(str, a)))
+    for tuple in cur.fetchall():
+        print(" ".join(map(str, tuple)))
 
 def task_5(cur):
     cur.execute(
@@ -111,7 +111,6 @@ def task_5(cur):
 
     for tuple in cur.fetchall():
         print(" ".join(map(str, tuple)))
-
 
 
 def main():
@@ -133,7 +132,6 @@ def main():
     task_3(cur)
     task_4(cur)
     task_5(cur)
-
 
     # end = datetime.now()
     # print("Excecution time total : %s" % (end-start))
