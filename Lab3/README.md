@@ -1,11 +1,13 @@
-##Technologie
+# Lab 3 Data processing in Databases
+
+## Technologie
 W rozwiązaniu zadania zdecydowałem się wykorzystać Pythona i SQLite, ponieważ zależało mi na prostocie i szybkości implementacji 
 oraz minimalizacji pobieranych bibliotek czy software'u( wszystko sprowadza się do 2 linijek w Dockerfile).
 Ponadto Python oferował dość przyjazne konwertowanie znacznika czasowego Unixa do czasu w UTC, skąd w prosty
 sposób uzyskałem interesujące mnie dane czyli rok,miesiąc i dzień.
 Stworzone przeze mnie tabele po transformacji znajdują się w pliku Schemat_bazy.jpg. 
 
-##Wyniki
+## Wyniki
 ```
 You're The One Dwight Yoakam 145267
 Undo Björk 129778
@@ -52,10 +54,10 @@ Coldplay 201081
 5283f472d868bfac68805acb83f35fd7142e3afd
 ```
 ## Schemat bazy danych
-![Schemat bazy danych](Schemat.bazy.jpg)
+![Schemat bazy danych](Schemat_bazy.jpg)
 
 
-# Lab 3 Data processing in Databases
+
 
 ## Download Million Song Dataset
 ```
