@@ -17,17 +17,16 @@ bash lab4.sh
 
 ## Results
 ```
-You're The One Dwight Yoakam 145267
-Undo Björk 129778
-Revelry Kings Of Leon 105162
-Sehr kosmisch Harmonia 84981
-Horn Concerto No. 4 in E flat K495: II. Romance (Andante cantabile) Barry Tuckwell/Academy of St Martin-in-the-Fields/Sir Neville Marriner 77632
-Dog Days Are Over (Radio Edit) Florence + The Machine 71300
-Secrets OneRepublic 58472
-Canada Five Iron Frenzy 54655
-Invalid Tub Ring 53494
-Ain't Misbehavin Sam Cooke 49073
-
+Dwight Yoakam You're The One 145267
+Bj�rk Undo 129778
+Kings Of Leon Revelry 105162
+Harmonia Sehr kosmisch 84981
+Barry Tuckwell/Academy of St Martin-in-the-Fields/Sir Neville Marriner Horn Concerto No. 4 in E flat K495: II. Romance (Andante cantabile) 77632
+Florence + The Machine Dog Days Are Over (Radio Edit) 71300
+OneRepublic Secrets 58472
+Five Iron Frenzy Canada 54655
+Tub Ring Invalid 53494
+Sam Cooke Ain't Misbehavin 49073
 ec6dfcf19485cb011e0b22637075037aae34cf26 1040
 119b7c88d58d0c6eb051365c103da5caf817bea6 641
 b7c24f770be6b802805ac0e2106624a517643c17 637
@@ -38,21 +37,20 @@ d7d2d888ae04d16e994d6964214a1de81392ee04 586
 c1255748c06ee3f6440c51c439446886c7807095 547
 db6a78c78c9239aba33861dae7611a6893fb27d5 529
 99ac3d883681e21ea68071019dba828ce76fe94d 499
-
 Coldplay 201081
+01 2353286
+02 2142739
+03 2351583
+04 2280859
+05 2357973
+06 2277722
+07 2353267
+08 2354972
+09 2281348
+10 2358168
+11 2278335
+12 2339105
 
-1 2353423
-2 2142793
-3 2354696
-4 2280733
-5 2358146
-6 2277770
-7 2353362
-8 2354811
-9 2281371
-10 2355043
-11 2278369
-12 2338840
 
 00832bf55ed890afeb2b163024fbcfaf58803098
 01cb7e60ba11f9b96e9899dd8da74c277145066e
