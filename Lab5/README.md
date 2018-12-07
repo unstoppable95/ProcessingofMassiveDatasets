@@ -16,7 +16,7 @@ Results for all data
 
 ```
 
-## Matrix multiply
+## Matrix multiply (required M.txt and N.txt)
 ```
 Results :
 
@@ -422,7 +422,7 @@ Results :
 ```
 
 
-## MSDC Results
+## MSDC Results (required samples.txt, dates.txt and tracks.txt which you can generate by files inside Lab4 directory)
 ```
 The most popular songs
 
