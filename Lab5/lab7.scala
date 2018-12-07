@@ -7,11 +7,19 @@ val  random = Random
 val  data = sc.parallelize(for (i<-1 to n) yield { val g=random.nextInt(7); val (mu,sigma) = groups(g); (g, mu+sigma*random.nextGaussian())})
 data.cache
 
-//check 10 records
-data.take(10)
-
-// group , ( number of examples, average, variance)
+//for groups
+// group , (number of examples, average, variance)
 val resultsForGroups= data.map(t=>(t._1,(1,t._2,t._2*t._2))).reduceByKey((a,b)=>(a._1+b._1,a._2+b._2,a._3+b._3)).map(p=>(p._1,(p._2._1,(p._2._2/p._2._1),(p._2._3/p._2._1)-(p._2._2/p._2._1)*(p._2._2/p._2._1))))
 
-//resultsForGroups.take()
 resultsForGroups.collect().foreach(println)
+
+//for all
+//(0,(number of examples, sum, sum*sum))
+val dataAll =data.map(t=>(t._1,(1,t._2,t._2*t._2))).reduceByKey((a,b)=>(a._1+b._1,a._2+b._2,a._3+b._3)).reduce((a,b) =>(0,(a._2._1+b._2._1, a._2._2+b._2._2, a._2._3+b._2._3)))
+
+
+//(number of examples, average, variance)
+val resultsAll = (dataAll._2._1, (dataAll._2._2/dataAll._2._1), (dataAll._2._3/dataAll._2._1)-(dataAll._2._2/dataAll._2._1)*(dataAll._2._2/dataAll._2._1))
+
+
+println(resultsAll)
