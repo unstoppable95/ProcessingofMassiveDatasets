@@ -10,6 +10,8 @@ data.cache
 //check 10 records
 data.take(10)
 
-val resultsForGroups= data.map(t=>(t._1,(1,t._2,t._2*t._2))).reduceByKey((a,b)=>(a._1+b._1,a._2+b._2,a._3+b._3)).map(p=>(p._1,p._2._2/p._2._1))
+// group , ( number of examples, average, variance)
+val resultsForGroups= data.map(t=>(t._1,(1,t._2,t._2*t._2))).reduceByKey((a,b)=>(a._1+b._1,a._2+b._2,a._3+b._3)).map(p=>(p._1,(p._2._1,(p._2._2/p._2._1),(p._2._3/p._2._1)-(p._2._2/p._2._1)*(p._2._2/p._2._1))))
 
-resultsForGroups.take(7)
+//resultsForGroups.take()
+resultsForGroups.collect().foreach(println)
