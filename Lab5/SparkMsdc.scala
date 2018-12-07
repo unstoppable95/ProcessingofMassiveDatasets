@@ -13,9 +13,9 @@ facts.groupBy("song_id").
 count.join(songs,facts("song_id")===songs("song_id")).
 select("song","artist","count").
 orderBy(desc("count")).
-show(10)
+show(10,false)
 
-//query 2 -> Top 10 users which listened the biggest number of unique songs 
+//query 2 -> Top 10 users who listened the biggest number of unique songs 
 facts.select("user_id","song_id").
 distinct().
 groupBy("user_id").
@@ -41,7 +41,7 @@ select("month","count").
 orderBy("month").
 show(12)
 
-//query 5 -> 10 users who listened all 3 most popular songs prepared by Queen 
+//query 5 -> 10 users who listened all 3 most popular songs performed by Queen 
 val Queens3Popular = songs.select("song_id","artist").
 filter($"artist".isin("Queen")).
 join(facts, "song_id").
