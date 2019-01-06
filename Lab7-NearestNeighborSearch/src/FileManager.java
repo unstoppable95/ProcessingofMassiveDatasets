@@ -25,7 +25,6 @@ public class FileManager {
                     tmp.add(lineContent[1]);
                     userUniqueSongs.put((lineContent[0]), tmp);
                 }
-
             }
             reader.close();
         } catch (IOException e) {
