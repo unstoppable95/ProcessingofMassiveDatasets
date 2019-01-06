@@ -16,6 +16,7 @@ public class FileManager {
             reader.readLine();
             while ((line = reader.readLine()) != null) {
                 int[] lineContent = Arrays.stream(line.split(",")).mapToInt(Integer::parseInt).toArray();
+                // user : unique songs
                 if (userUniqueSongs.get(lineContent[0]) != null) {
                     if (!userUniqueSongs.get(lineContent[0]).contains(lineContent[1])) {
                         userUniqueSongs.get(lineContent[0]).add(lineContent[1]);
@@ -25,6 +26,7 @@ public class FileManager {
                     tmp.add(lineContent[1]);
                     userUniqueSongs.put((lineContent[0]), tmp);
                 }
+
             }
             reader.close();
         } catch (IOException e) {
@@ -32,6 +34,33 @@ public class FileManager {
         }
         return userUniqueSongs;
     }
+
+    public Map<Integer, ArrayList<Integer>> makeSongsStructure() {
+        Map<Integer, ArrayList<Integer>> songUniqueUsers = new HashMap<>();
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(this.pathToInputFile));
+            String line;
+            reader.readLine();
+            while ((line = reader.readLine()) != null) {
+                int[] lineContent = Arrays.stream(line.split(",")).mapToInt(Integer::parseInt).toArray();
+                //song : unique users
+                if (songUniqueUsers.get(lineContent[1]) != null) {
+                    if (!songUniqueUsers.get(lineContent[1]).contains(lineContent[0])) {
+                        songUniqueUsers.get(lineContent[1]).add(lineContent[0]);
+                    }
+                } else {
+                    ArrayList<Integer> tmp = new ArrayList();
+                    tmp.add(lineContent[0]);
+                    songUniqueUsers.put((lineContent[1]), tmp);
+                }
+            }
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return songUniqueUsers;
+    }
+
 
     public void saveResultsToFile(int userId, ArrayList<ArrayList<Object>> userList) {
 
